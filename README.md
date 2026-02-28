@@ -1,81 +1,61 @@
 <p align="center">
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
+FEEDBACK COLLECTOR
 
-# [Project Name] 🎯
+SHECODES
+ Team Members
+- Member 1: AYSHA FIZAH - [ALBERTIAN INSTITUTE OF SCIENCE AND TECHNOLOGY]
+- Member 2: [AFRIN FATHIMA V.S] - [ALBERTIAN INSTITUTE OF SCIENCE AND TECHNOLOGY]
 
-## Basic Details
+ Hosted Project Link
+[http://localhost:3000]
 
-### Team Name: [Name]
+Project Description
+The Feedback Collector is a web-based application that allows users to rate a system using stars and provide written feedback. It helps collect and manage user opinions in an organized digital format.
 
-### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+The Problem statement
+Many organizations do not have a proper system to collect and manage feedback efficiently. This makes it difficult to understand user satisfaction and improve services.
 
-### Hosted Project Link
-[mention your project hosted link here]
+The Solution
+The proposed system provides an easy and centralized platform to collect ratings and comments, store them digitally, and help improve the system based on user feedback.
 
-### Project Description
-[2-3 lines about what your project does]
+ Technical Details
 
-### The Problem statement
-[What problem are you solving?]
-
-### The Solution
-[How are you solving it?]
-
----
-
-## Technical Details
-
-### Technologies/Components Used
+ Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: JAVASCRIPT,HTML,CSS
+- Frameworks used: Express.js
+- Libraries used: Node.js
+- Tools used: VS CODE,GIT,NPM,Google chrome
 
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
-
----
-
-## Features
+Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+The Feedback Collector allows users to rate the system using a star rating and submit written comments. It stores the feedback in the backend and enables viewing of submitted responses. The system provides a simple and user-friendly way to collect and manage feedback digitally.
 
----
-
-## Implementation
+ Implementation
 
 ### For Software:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
+git clone <repository-link>
+cd feedback-collector
+
+cd frontend
+npm install
+
+cd ../backend
+npm install
 
 #### Run
-```bash
-[Run commands - e.g., npm start, python app.py]
-```
+cd backend
+npm start
 
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
-
----
+cd frontend
+npm start
 
 ## Project Documentation
 
@@ -96,25 +76,23 @@ List the key features of your project:
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+🔹 Components
+Frontend (Client Side)
+Built using technologies like HTML / CSS 
+Provides the user interface.
+Sends API requests to the backend.
+Displays responses received from the server.
+Backend (Server Side)
+Developed using Node.js / Express (or your backend framework).
+Handles business logic.
+Processes incoming requests from the frontend.
+Communicates with the database.
+Sends responses back to the client.
+Database
+Stores user data, application data, and records.
+Can be MongoDB / MySQL / PostgreSQL (based on your project).
+Performs CRUD operations (Create, Read, Update, Delete).
 
-**Application Workflow:**
-
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
-
----
-
-### For Hardware:
-
-#### Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 #### Build Photos
 
@@ -131,102 +109,14 @@ List the key features of your project:
 
 ---
 
-## Additional Documentation
 
-### For Web Projects with Backend:
 
-#### API Documentation
-
-**Base URL:** `https://api.yourproject.com`
-
-##### Endpoints
-
-**GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
-- **Response:**
-```json
-{
-  "status": "success",
-  "data": {}
-}
-```
-
-**POST /api/endpoint**
-- **Description:** [What it does]
-- **Request Body:**
-```json
-{
-  "field1": "value1",
-  "field2": "value2"
-}
-```
-- **Response:**
-```json
-{
-  "status": "success",
-  "message": "Operation completed"
-}
-```
 
 [Add more endpoints as needed...]
 
 ---
 
-### For Mobile Apps:
 
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
-
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
-
----
-
-### For Hardware Projects:
-
-#### Bill of Materials (BOM)
-
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
 
 **Total Estimated Cost:** ₹[Amount]
 
@@ -404,17 +294,6 @@ If you used AI tools during development, document them here for transparency:
 - [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
 - [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
 
----
 
-## License
-
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
-
-**Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
-
----
 
 Made with ❤️ at TinkerHub
