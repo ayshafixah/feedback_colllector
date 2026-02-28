@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Collector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        <div class="icon">&#128172;</div>
+        <h2>Feedback Collector</h2>
+        <p class="subtitle">We would love to hear what you think!</p>
+    </div>
+    <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <label for="feedback">Your Feedback</label>
+        <textarea id="feedback" placeholder="Share your thoughts with us..."></textarea>
+    </div>
+    <div class="form-group">
+        <label for="rating">Rating</label>
+        <select id="rating">
+            <option value="">-- Select a Rating --</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+    </div>
+    <button onclick="submitFeedback()">Submit Feedback</button>
+    <div id="output"></div>
+</div>
+<script>
+function submitFeedback() {
+    const name = document.getElementById("name").value.trim();
+    const comment = document.getElementById("feedback").value.trim();
+    const rating = document.getElementById("rating").value;
+    if (!name) { showMessage("Please enter your name!", "error"); return; }
+    if (!comment) { showMessage("Please enter your feedback!", "error"); return; }
+    if (!rating) { showMessage("Please select a rating!", "error"); return; }
+    fetch("/submit-feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, rating, comment })
+    })
+    .then(res => res.json())
+    .then(data => {
+        showMessage(data.message, "success");
+        document.getElementById("name").value = "";
+        document.getElementById("feedback").value = "";
+        document.getElementById("rating").value = "";
+    })
+    .catch(err => {
+        showMessage("Something went wrong. Please try again.", "error");
+        console.error(err);
+    });
+}
+function showMessage(msg, type) {
+    const output = document.getElementById("output");
+    output.textContent = msg;
+    output.className = type;
+    output.style.display = "block";
+    if (type !== "success") { setTimeout(() => { output.style.display = "none"; }, 4000); }
+}
+</script>
+</body>
+</html>
